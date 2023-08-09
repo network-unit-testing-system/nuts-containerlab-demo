@@ -1,0 +1,42 @@
+router:
+  username: admin 
+  password: NokiaSrl1!
+  connection_options:
+    napalm:
+      platform: srl
+      extras:
+        optional_args:
+          gnmi_port: 57400
+          jsonrpc_port: 80
+          # target_name: 172.100.100.3
+          # tls_cert: /root/gnmic_certs/srl_certs/clientCert.crt
+          # tls_ca: /root/gnmic_certs/srl_certs/RootCA.crt
+          # tls_key: /root/gnmic_certs/srl_certs/clientKey.pem
+          skip_verify: True
+          insecure: True
+          encoding: "JSON_IETF"
+
+linux: {}
+
+leaf:
+  data:
+    tags:
+      - ospf
+      - isis
+      - bgp
+
+spine:
+  data:
+    tags:
+      - ospf
+      - isis
+      - bgp
+
+superspine:
+  data:
+    tags:
+      - ospf
+      - isis
+      - bgp
+
+client: {}

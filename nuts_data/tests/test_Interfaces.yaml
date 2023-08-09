@@ -1,0 +1,64 @@
+- test_class: TestNapalmInterfaces
+  test_data:
+    # - tags:     # Would be better to use only groups but to show it works
+    #     - site1
+    #     - site2
+    #   groups:
+    #     - spine
+    #     - superspine
+    #   name: ethernet-1/1
+    #   is_enabled: true
+    #   is_up: true
+    #   mtu: 9232
+    # - tags:     # Would be better to use only groups but to show it works
+    #     - site1
+    #     - site2
+    #   groups:
+    #     - spine
+    #     - superspine
+    #   name: ethernet-1/2
+    #   is_enabled: true
+    #   is_up: true
+    #   mtu: 9232
+    # - groups:
+    #     - spine
+    #   name: ethernet-1/3
+    #   is_enabled: true
+    #   is_up: true
+    #   mtu: 9232
+    
+    # # Test interface speed 
+    # - groups:
+    #     - leaf
+    #   name: ethernet-1/1
+    #   speed: 25.0
+    # - groups:
+    #     - leaf
+    #   name: ethernet-1/2
+    #   speed: 25.0
+    # - groups:
+    #     - leaf
+    #   name: ethernet-1/3
+    #   speed: 25.0
+
+    # - groups:
+    #     - spine
+    #     - superspine
+    #   name: ethernet-1/1
+    #   speed: 10.0
+    # - groups:
+    #     - spine
+    #     - superspine
+    #   name: ethernet-1/2
+    #   speed: 10.0
+    - 
+      # host: 
+      #   - spine1
+      #   - spine2
+      #   - spine3
+      tags:
+        - site1
+      # groups:
+      #  - spine
+      name: ethernet-1/3
+      speed: 100.0

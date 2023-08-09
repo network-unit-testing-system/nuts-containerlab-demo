@@ -1,0 +1,10 @@
+- test_class: TestNapalmLldpNeighbors
+  test_data:
+    - host: leaf2
+      local_port: ethernet-1/1
+      remote_host: spine1
+      remote_port: ethernet-1/2
+    - host: leaf2
+      local_port: ethernet-1/2
+      remote_host: spine2
+      remote_port: ethernet-1/2

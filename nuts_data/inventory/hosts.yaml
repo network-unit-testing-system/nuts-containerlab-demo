@@ -1,0 +1,115 @@
+
+leaf1:
+  hostname: 172.100.100.2
+  groups:
+    - router
+    - leaf
+  data:
+    tags:
+      - site1
+    autonomous-system: 65001
+    outer-id: 30.0.0.1
+    
+leaf2:
+  hostname: 172.100.100.3
+  groups:
+    - router
+    - leaf
+  data:
+    tags:
+      - site1
+    autonomous-system: 65002
+    router-id: 30.0.0.2
+
+leaf3:
+  hostname: 172.100.100.4
+  groups:
+    - router
+    - leaf
+  data:
+    tags:
+      - site2
+    autonomous-system: 65003
+    router-id: 30.0.0.3
+
+leaf4:
+  hostname: 172.100.100.5
+  groups:
+    - router
+    - leaf
+  data:
+    tags:
+      - site2
+    autonomous-system: 65004
+    router-id: 30.0.0.4
+
+spine1:
+  hostname: 172.100.100.6
+  groups:
+    - router
+    - spine
+  data:
+    autonomous-system: 65056
+    router-id: 30.0.0.5
+
+spine2:
+  hostname: 172.100.100.7
+  groups:
+    - router
+    - spine
+  data:
+    autonomous-system: 65056
+    router-id: 30.0.0.6
+
+spine3:
+  hostname: 172.100.100.8
+  groups:
+    - router
+    - spine
+  data:
+    autonomous-system: 65078
+    router-id: 30.0.0.7
+
+spine4:
+  hostname: 172.100.100.9
+  groups:
+    - router
+    - spine
+  data:
+    autonomous-system: 65078
+    router-id: 30.0.0.8
+
+superspine1:
+  hostname: 172.100.100.10
+  groups:
+    - router
+    - superspine
+  data:
+    autonomous-system: 65910
+    router-id: 30.0.0.9
+
+superspine2:
+  hostname: 172.100.100.11
+  groups:
+    - router
+    - superspine
+  data:
+    autonomous-system: 65910
+    router-id: 30.0.0.10
+
+
+client2:
+  hostname: 172.100.100.13
+  groups:
+    - linux
+    - client
+client3:
+  hostname: 172.100.100.14
+  groups:
+    - linux
+    - client
+client4:
+  hostname: 172.100.100.15
+  groups:
+    - linux
+    - client
