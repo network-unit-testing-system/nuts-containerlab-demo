@@ -26,6 +26,20 @@ chmod +x ./setup.sh
 ./setup.sh
 ```
 
+Connect to client1 and run network tests:
+
+```bash
+docker exec -it clab-clos02-client1 bash
+
+root@client1:/# cd /workspace/
+root@client1:/workspace# ls -l
+total 12
+drwxr-xr-x 2 1000 1000 4096 Aug  8 22:10 inventory
+-rw-r--r-- 1 1000 1000  225 Aug  8 20:55 nr-config.yaml
+drwxr-xr-x 2 1000 1000 4096 Aug  9 08:12 tests
+
+root@client1:/workspace# pytest -vv
+```
 
 ## Stop
 
