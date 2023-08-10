@@ -5,8 +5,8 @@
 
 ## Requirements
 
- - containerlab
- - gnmic
+ - [containerlab](https://containerlab.dev/)
+ - [gnmic](https://gnmic.openconfig.net/)
 
 ## Lab
 
