@@ -1,5 +1,7 @@
 # nuts-containerlab-demo
 
+![Tests Successful ](imgs/successful.png)
+
 
 ## Requirements
 
@@ -47,3 +49,30 @@ root@client1:/workspace# pytest -vv
 sudo containerlab destroy
 ```
 
+
+
+## Running Tests
+
+In the best case, all tests will be successful (passed) or skipped. When the setup is executed, no test should fail.
+
+![Tests Successful ](imgs/successful.png)
+
+When we change tests we can see that tests fail now:
+
+```diff
+diff --git a/nuts_data/tests/test_Interfaces.yaml b/nuts_data/tests/test_Interfaces.yaml
+index 18fbab6..b727930 100644
+--- a/nuts_data/tests/test_Interfaces.yaml
++++ b/nuts_data/tests/test_Interfaces.yaml
+@@ -22,7 +22,7 @@
+       is_enabled: true
+       is_up: true
+       mtu: 9232
+-      speed: 100.0
++      speed: 10.0
+
+     # Test interface speed
+     - tags:   # Also group spine could be used.
+```
+
+![Tests Failed](imgs/failed.png)
