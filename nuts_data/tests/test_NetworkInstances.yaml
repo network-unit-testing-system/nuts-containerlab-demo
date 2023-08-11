@@ -1,0 +1,20 @@
+- test_class: TestNapalmNetworkInstances
+  test_data:
+    - groups:
+        - leaf
+        - spine
+      network_instance: default
+      interfaces:
+        - ethernet-1/1.0
+        - ethernet-1/2.0
+        - ethernet-1/3.0
+        - system0.0
+      route_distinguisher: ''   # not setup config
+    - groups:
+        - superspine
+      network_instance: default
+      interfaces:
+        - ethernet-1/1.0
+        - ethernet-1/2.0
+        - system0.0
+      route_distinguisher: ''   # not setup config
