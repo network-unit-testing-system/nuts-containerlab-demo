@@ -25,7 +25,7 @@
     - host: leaf4
       interface: ethernet-1/2.0
       ip: 10.0.0.19
-    
+
     # spine's
     - host: spine1
       interface: ethernet-1/1.0
@@ -83,9 +83,9 @@
     - groups:
         - spine
       min: 3
-      max: 20   # ARP on mgmt0.0 also count 
+      max: 20 # ARP on mgmt0.0 also count
     - groups:
         - superspine
         - leaf
       min: 3
-      max: 20   # ARP on mgmt0.0 also count 
+      max: 20 # ARP on mgmt0.0 also count

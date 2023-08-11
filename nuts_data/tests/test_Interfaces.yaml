@@ -23,9 +23,9 @@
       is_up: true
       mtu: 9232
       speed: 100.0
-    
-    # Test interface speed 
-    - tags:   # Also group spine could be used.
+
+    # Test interface speed
+    - tags: # Also group spine could be used.
         - site1
         - site2
       name: ethernet-1/1
