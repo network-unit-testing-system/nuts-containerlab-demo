@@ -1,6 +1,0 @@
-- test_class: TestNapalmBgpNeighborsCount
-  test_data:
-    - groups: router
-      neighbor_count: 2
-    - host: leaf2
-      neighbor_count: 1
