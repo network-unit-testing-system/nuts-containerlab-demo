@@ -1,0 +1,90 @@
+- test_class: TestNapalmArp
+  test_data:
+    # leaf's
+    - host: leaf1
+      interface: ethernet-1/1.0
+      ip: 10.0.0.1
+    - host: leaf1
+      interface: ethernet-1/2.0
+      ip: 10.0.0.3
+    - host: leaf2
+      interface: ethernet-1/1.0
+      ip: 10.0.0.5
+    - host: leaf2
+      interface: ethernet-1/2.0
+      ip: 10.0.0.7
+    - host: leaf3
+      interface: ethernet-1/1.0
+      ip: 10.0.0.13
+    - host: leaf3
+      interface: ethernet-1/2.0
+      ip: 10.0.0.15
+    - host: leaf4
+      interface: ethernet-1/1.0
+      ip: 10.0.0.17
+    - host: leaf4
+      interface: ethernet-1/2.0
+      ip: 10.0.0.19
+    
+    # spine's
+    - host: spine1
+      interface: ethernet-1/1.0
+      ip: 10.0.0.0
+    - host: spine1
+      interface: ethernet-1/2.0
+      ip: 10.0.0.4
+    - host: spine1
+      interface: ethernet-1/3.0
+      ip: 10.0.0.9
+    - host: spine2
+      interface: ethernet-1/1.0
+      ip: 10.0.0.2
+    - host: spine2
+      interface: ethernet-1/2.0
+      ip: 10.0.0.6
+    - host: spine2
+      interface: ethernet-1/3.0
+      ip: 10.0.0.11
+    - host: spine3
+      interface: ethernet-1/1.0
+      ip: 10.0.0.12
+    - host: spine3
+      interface: ethernet-1/2.0
+      ip: 10.0.0.16
+    - host: spine3
+      interface: ethernet-1/3.0
+      ip: 10.0.0.21
+    - host: spine4
+      interface: ethernet-1/1.0
+      ip: 10.0.0.14
+    - host: spine4
+      interface: ethernet-1/2.0
+      ip: 10.0.0.18
+    - host: spine4
+      interface: ethernet-1/3.0
+      ip: 10.0.0.23
+    # superspine's
+    - host: superspine1
+      interface: ethernet-1/1.0
+      ip: 10.0.0.8
+    - host: superspine1
+      interface: ethernet-1/2.0
+      ip: 10.0.0.20
+    - host: superspine2
+      interface: ethernet-1/1.0
+      ip: 10.0.0.10
+    - host: superspine2
+      interface: ethernet-1/2.0
+      ip: 10.0.0.22
+
+- test_class: TestNapalmArpRange
+  test_data:
+    - groups:
+        - spine
+      min: 3
+      max: 20   # ARP on mgmt0.0 also count 
+    - groups:
+        - superspine
+        - leaf
+      min: 3
+      max: 20   # ARP on mgmt0.0 also count 
