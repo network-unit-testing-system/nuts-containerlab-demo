@@ -1,0 +1,7 @@
+- test_module: nuts.base_tests.napalm_get_users
+  test_class: TestNapalmOnlyDefinedUsersExist
+  test_data:
+    - groups:
+        - router
+      usernames:
+        - admin
