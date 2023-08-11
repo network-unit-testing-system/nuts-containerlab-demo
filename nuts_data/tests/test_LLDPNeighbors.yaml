@@ -1,10 +1,35 @@
 - test_class: TestNapalmLldpNeighbors
   test_data:
-    - host: leaf2
+    # Leaf uplink LLDP Neighbors
+    - tags:
+        - site1
       local_port: ethernet-1/1
       remote_host: spine1
-      remote_port: ethernet-1/2
-    - host: leaf2
+      # remote_port: ethernet-1/2
+    - tags:
+        - site1
       local_port: ethernet-1/2
       remote_host: spine2
-      remote_port: ethernet-1/2
+      # remote_port: ethernet-1/2
+    - tags:
+        - site2
+      local_port: ethernet-1/1
+      remote_host: spine3
+      # remote_port: ethernet-1/2
+    - tags:
+        - site2
+      local_port: ethernet-1/2
+      remote_host: spine4
+      # remote_port: ethernet-1/2
+
+    # Spine uplink LLDP Neighobrs
+    - host:
+        - spine1
+        - spine3
+      local_port: ethernet-1/3
+      remote_host: superspine1
+    - host:
+        - spine2
+        - spine4
+      local_port: ethernet-1/3
+      remote_host: superspine2
