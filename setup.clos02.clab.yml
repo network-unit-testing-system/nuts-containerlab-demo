@@ -10,7 +10,9 @@ topology:
     srl:
       image: ghcr.io/nokia/srlinux:23.3.3 
     linux:
-      image: ghcr.io/hellt/network-multitool
+      image: ghcr.io/network-unit-testing-system/nuts-testclient:0.0.2
+      env:
+        ADMIN_PASSWORD: admin
   nodes:
     leaf1:
       kind: srl

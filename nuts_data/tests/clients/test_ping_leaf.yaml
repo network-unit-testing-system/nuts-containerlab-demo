@@ -1,0 +1,20 @@
+# nuts_client_tests tests are still in a early alpha phase
+- test_module: nuts_client_tests.linux_ping
+  test_class: TestLinuxPing
+  test_execution:
+      ttl: 1
+      timeout: 1
+      size: 1472
+  test_data:
+    - host: client2
+      destination: 10.0.0.26
+      expected: SUCCESS
+      max_drop: 1
+    - host: client3
+      destination: 10.0.0.28
+      expected: SUCCESS
+      max_drop: 1
+    - host: client4
+      destination: 10.0.0.30
+      expected: SUCCESS
+      max_drop: 1

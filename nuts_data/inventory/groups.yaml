@@ -16,7 +16,10 @@ router:
           insecure: True
           encoding: "JSON_IETF"
 
-linux: {}
+linux:
+  username: admin
+  password: admin
+  platform: linux
 
 leaf:
   data:
