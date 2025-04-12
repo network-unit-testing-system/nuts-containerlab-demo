@@ -14,7 +14,7 @@ pip install nuts
 # pip install git+https://github.com/network-unit-testing-system/nuts.git
 
 
-pip install git+https://github.com/napalm-automation-community/napalm-srlinux
+pip install git+https://github.com/napalm-automation-community/napalm-srlinux@v1.0.6
 
 
 # Client tests are still in a early alpha phase

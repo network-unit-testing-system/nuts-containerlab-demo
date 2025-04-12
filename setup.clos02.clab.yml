@@ -8,7 +8,7 @@ mgmt:
 topology:
   kinds:
     srl:
-      image: ghcr.io/nokia/srlinux:23.3.3 
+      image: ghcr.io/nokia/srlinux:25.3.1 
     linux:
       image: ghcr.io/network-unit-testing-system/nuts-testclient:0.0.2
       env:
@@ -86,22 +86,38 @@ topology:
 
   links:
     - endpoints: ["leaf1:e1-1", "spine1:e1-1"]
+      mtu: &mtu 9232
     - endpoints: ["leaf1:e1-2", "spine2:e1-1"]
+      mtu: *mtu
     - endpoints: ["leaf2:e1-1", "spine1:e1-2"]
+      mtu: *mtu
     - endpoints: ["leaf2:e1-2", "spine2:e1-2"]
+      mtu: *mtu
 
     - endpoints: ["spine1:e1-3", "superspine1:e1-1"]
+      mtu: *mtu
     - endpoints: ["spine2:e1-3", "superspine2:e1-1"]
+      mtu: *mtu
 
     - endpoints: ["leaf3:e1-1", "spine3:e1-1"]
+      mtu: *mtu
     - endpoints: ["leaf3:e1-2", "spine4:e1-1"]
+      mtu: *mtu
     - endpoints: ["leaf4:e1-1", "spine3:e1-2"]
+      mtu: *mtu
     - endpoints: ["leaf4:e1-2", "spine4:e1-2"]
+      mtu: *mtu
 
     - endpoints: ["spine3:e1-3", "superspine1:e1-2"]
+      mtu: *mtu
     - endpoints: ["spine4:e1-3", "superspine2:e1-2"]
+      mtu: *mtu
 
     - endpoints: ["client1:eth1", "leaf1:e1-3"]
+      mtu: *mtu
     - endpoints: ["client2:eth1", "leaf2:e1-3"]
+      mtu: *mtu
     - endpoints: ["client3:eth1", "leaf3:e1-3"]
+      mtu: *mtu
     - endpoints: ["client4:eth1", "leaf4:e1-3"]
+      mtu: *mtu
