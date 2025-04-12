@@ -5,7 +5,8 @@
         "memory": "32gb",
         "storage": "64gb"
     },
-    "postStartCommand": "bash -c \"$(curl -sL https://get-gnmic.openconfig.net)\"",
+    "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+    "postAttachCommand": "./.devcontainer/postAttachCommand.sh",
     "customizations": {
         "codespaces": {
             "openFiles": [
