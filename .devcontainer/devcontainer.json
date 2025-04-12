@@ -5,5 +5,13 @@
         "memory": "32gb",
         "storage": "64gb"
     },
-    "postStartCommand": "bash -c \"$(curl -sL https://get-gnmic.openconfig.net)\""
+    "postStartCommand": "bash -c \"$(curl -sL https://get-gnmic.openconfig.net)\"",
+    "customizations": {
+        "codespaces": {
+            "openFiles": [
+                "README.md",
+                "configs/client1.sh"
+            ]
+        }
+    }
 }

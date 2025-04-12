@@ -1,0 +1,10 @@
+--------------------------------------------------------------------
+********************************************************************
+             👋👋👋  Welcome to the NUTS demo 👋👋👋
+- Start the containerlab lab: `containerlab deploy`
+- Configure the topology: `./setup.sh`
+- Connect to client1: `docker exec -it clab-clos02-client1 bash`
+- Change directory to workspace: `cd workspace`
+- Execute the tests: `pytest -vv`
+********************************************************************
+--------------------------------------------------------------------
