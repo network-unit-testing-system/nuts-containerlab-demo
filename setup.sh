@@ -1,4 +1,6 @@
 #!/bin/bash
+RED='\033[0;31m'
+NC='\033[0m' # No Color
 
 CFG_DIR=./configs
 SRL_PASSWORD=NokiaSrl1!
@@ -9,7 +11,7 @@ configure_SRL() {
   if [ $? -eq 0 ]; then
     docker exec clab-clos02-$1 sr_cli "save startup" > /dev/null
   else
-    echo "Error: Unable to push config into clab-clos02-$1."
+    echo -e "${RED}Error: Unable to push config into clab-clos02-$1.${NC}"
   fi
   echo $OUT > /dev/null
 }
@@ -43,7 +45,7 @@ for p in $PIDS; do
   if wait $p; then
     echo "Process $p success"
   else
-    echo "Process $p fail"
+    echo "${RED}Process $p fail${NC}"
   fi
 done
 echo
