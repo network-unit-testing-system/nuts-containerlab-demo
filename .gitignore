@@ -1,2 +1,4 @@
 clab-clos02/
 .setup.clos02.clab.yml.bak
+.venv
+nuts_data/tshoot.py
