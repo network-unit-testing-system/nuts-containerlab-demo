@@ -1,4 +1,5 @@
 #  # Waiting for https://github.com/napalm-automation-community/napalm-srlinux/issues/61
+[]
 # - test_module: nuts.base_tests.napalm_get_users
 #   test_class: TestNapalmOnlyDefinedUsersExist
 #   test_data:
