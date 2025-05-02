@@ -18,4 +18,4 @@ pip install git+https://github.com/napalm-automation-community/napalm-srlinux@v1
 
 
 # Client tests are still in a early alpha phase
-pip install git+https://github.com/network-unit-testing-system/nuts-clinet-tests.git
+pip install git+https://github.com/network-unit-testing-system/nuts-client-tests.git
