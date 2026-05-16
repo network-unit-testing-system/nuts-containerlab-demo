@@ -51,7 +51,7 @@ root@client1:/workspace# pytest -vv
 ## Stop
 
 ```bash
-sudo containerlab destroy
+sudo containerlab destroy --cleanup
 ```
 
 
